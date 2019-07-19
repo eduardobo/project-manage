@@ -7,15 +7,15 @@
       <b-collapse id="nav-collapse" is-nav>
 
         <b-navbar-nav class="ml-auto">
-          <b-nav-item to="/">Inicio</b-nav-item>
+          <b-nav-item class="normal" to="/">Inicio</b-nav-item>
 
-          <b-nav-item-dropdown text="Quienes Somos" right>
-            <b-dropdown-item to="/whoweare">Mision</b-dropdown-item>
-            <b-dropdown-item href="#">Experiencia</b-dropdown-item>
-            <b-dropdown-item href="#">Testimonios</b-dropdown-item>
+          <b-nav-item-dropdown class="normal" text="Quienes Somos" right>
+            <b-dropdown-item to="/whoweare" class="mision">Mision</b-dropdown-item>
+            <b-dropdown-item href="#" class="mision">Experiencia</b-dropdown-item>
+            <b-dropdown-item href="#" class="mision">Testimonios</b-dropdown-item>
           </b-nav-item-dropdown>
 
-          <b-nav-item to="/contact">Contactanos</b-nav-item>
+          <b-nav-item class="normal" to="/contact">Contactanos</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -41,7 +41,11 @@ export default {
   color: #2c3e50;
 }
 
-#nav a {
+#nav a.mision{
+  color: #2c3e50;
+}
+
+#nav a.normal{
   font-weight: bold;
   color: #ffffff;
   opacity: 0.7;
@@ -50,6 +54,10 @@ export default {
   font-weight: bold;
   color: #ffffff;
   opacity: 1;
+}
+
+#nav a.router-link-exact-active a.mision{
+  color: #2c3e50;
 }
 
 #nav a.router-link-exact-active {
