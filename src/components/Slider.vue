@@ -33,7 +33,7 @@
       <b-carousel-slide>
         <img
           slot="img"
-          class="d-block img-fluid w-100"
+          class="resize img-fluid w-100"
           width="1024"
           height="480"
           src="https://picsum.photos/1024/480/?image=55"
@@ -78,8 +78,9 @@
 </script>
 
 <style scoped>
-#carousel-1 b-carousel{
-  height: 200;
-  width: auto;
+img.resize{
+  align-self: center !important;
+  height: 50% !important;
+  width: 50% !important;
 }
 </style>

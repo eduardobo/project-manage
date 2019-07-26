@@ -1,5 +1,5 @@
 <template>
-    <b-container class="px-0">
+    <b-container class="px-0 mb-4">
             <b-row>
                 <b-col cols="12">
                     <h1 class="mt-5">Comienza ya tu proyecto!</h1>
