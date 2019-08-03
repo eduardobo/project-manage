@@ -42,10 +42,41 @@
                             </b-col>
                             <b-form-textarea placeholder="Que esta pasando por tu mente que no haz realizado aun por falta de dinero?" rows="3"></b-form-textarea>
                             <b-col cols="12" class="d-flex flex-row-reverse">
-                                <b-button variant="primary">Enviar</b-button>
+                                <b-button @click="sendMail" variant="primary">Enviar</b-button>
                             </b-col>
                         </b-col>
                 </b-col>
             </b-row>
     </b-container>
 </template>
+
+<script>
+var url = 'localhost/sendMail.php';
+export default {
+    name: 'Contact',
+    data(){
+        return{
+            email: '',
+            name: '',
+            phone: '',
+            project: '',
+        }
+    },
+    methods:{
+        sendMail(){
+            this.$http.post(`http://localhost/sendMail.php`,{
+                name: 'prueba',
+                email: 'eduard_park.13@hotmail.com',
+                phone: '44564123',
+                project: 'proof'
+            })
+            .then(function (response) {
+                console.log(response.data);
+            })
+            .catch(error =>{
+                console.log(error)
+            } )
+        }
+    }
+}
+</script>
